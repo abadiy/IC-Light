@@ -426,13 +426,13 @@ with block:
                     num_samples = gr.Slider(label="Images", minimum=1, maximum=12, value=1, step=1)
                     seed = gr.Number(label="Seed", value=12345, precision=0)
                 with gr.Row():
-                    image_width = gr.Slider(label="Image Width", minimum=256, maximum=1024, value=512, step=64)
-                    image_height = gr.Slider(label="Image Height", minimum=256, maximum=1024, value=640, step=64)
+                    image_width = gr.Slider(label="Image Width", minimum=256, maximum=2048, value=1088, step=64)
+                    image_height = gr.Slider(label="Image Height", minimum=256, maximum=2048, value=1984, step=64)
 
             with gr.Accordion("Advanced options", open=False):
                 steps = gr.Slider(label="Steps", minimum=1, maximum=100, value=20, step=1)
-                cfg = gr.Slider(label="CFG Scale", minimum=1.0, maximum=32.0, value=7.0, step=0.01)
-                highres_scale = gr.Slider(label="Highres Scale", minimum=1.0, maximum=3.0, value=1.5, step=0.01)
+                cfg = gr.Slider(label="CFG Scale", minimum=1.0, maximum=32.0, value=1.2, step=0.01)
+                highres_scale = gr.Slider(label="Highres Scale", minimum=1.0, maximum=3.0, value=1.0, step=0.01)
                 highres_denoise = gr.Slider(label="Highres Denoise", minimum=0.1, maximum=0.9, value=0.5, step=0.01)
                 a_prompt = gr.Textbox(label="Added Prompt", value='best quality')
                 n_prompt = gr.Textbox(label="Negative Prompt",
